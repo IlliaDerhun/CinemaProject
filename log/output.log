@@ -1,3 +1,1 @@
-2018-10-06 23:14:18,627  INFO Main:8 - method main start
-2018-10-06 23:14:18,629  WARN Main:9 - some warning
-2018-10-06 23:14:18,629 ERROR Main:10 - some error
+2018-10-13 21:13:21,130 ERROR cinemaproject.illiaderhun.com.github.Main:27 - servletConnection caught NamingException
