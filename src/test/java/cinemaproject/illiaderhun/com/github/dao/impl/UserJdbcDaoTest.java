@@ -61,7 +61,10 @@ public class UserJdbcDaoTest {
 
     @Test
     public void update() {
-
+        userJdbcDao.create(someUser);
+        someUser.setName("NewName");
+        assertTrue(userJdbcDao.update(someUser));
+        userJdbcDao.delete(userJdbcDao.readByEmail("vasiliev@mail.com").getId());
     }
 
     @Test

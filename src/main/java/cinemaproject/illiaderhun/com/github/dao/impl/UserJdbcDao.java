@@ -128,7 +128,18 @@ public class UserJdbcDao implements UserDao<User, Integer> {
 
     @Override
     public boolean update(User theEntity) {
-        return false;
+        LOGGER.info("method update start with: " + theEntity);
+        boolean result = false;
+        try (PreparedStatement statement = connection.prepareStatement(properties.getProperty("update"))){
+            setStatement(statement, theEntity);
+            statement.setInt(6, theEntity.getId());
+
+            result = statement.executeUpdate() == 1;
+        } catch (SQLException e) {
+            LOGGER.info("method update caught SQLException");
+            LOGGER.trace(e);
+        }
+        return result;
     }
 
     @Override
