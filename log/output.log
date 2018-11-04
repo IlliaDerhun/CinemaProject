@@ -266,3 +266,251 @@
 2018-11-04 18:34:28,933  INFO UserJdbcDao:28 - method readByEmail started with email: petrov@mail.com
 2018-11-04 18:34:28,965  INFO UserJdbcDao:70 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@30b8a058
 2018-11-04 18:34:28,966  INFO UserJdbcDao:86 - method madeUser return: User{id=2, name='Petia', surname='Petrov', email='petrov@mail.com', password='1234', roleId=1}
+2018-11-04 18:52:45,884  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 18:52:46,184  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 18:52:46,184  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 18:52:46,184  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 18:52:46,184  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 18:52:46,184  INFO UserJdbcDao:47 - method create start with: User{id=0, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 18:52:46,204  INFO UserJdbcDao:81 - method setStatement start
+2018-11-04 18:52:46,204 ERROR UserJdbcDao:56 - method create caught SQLException
+2018-11-04 18:54:16,908  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 18:54:17,248  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 18:54:17,248  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 18:54:17,248  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 18:54:17,248  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 18:54:17,248  INFO UserJdbcDao:47 - method create start with: User{id=0, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 18:54:17,268  INFO UserJdbcDao:81 - method setStatement start
+2018-11-04 18:56:13,589 ERROR UserJdbcDao:56 - method create caught SQLException
+2018-11-04 18:56:16,226  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 18:56:16,526  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 18:56:16,526  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 18:56:16,526  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 18:56:16,526  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 18:56:16,526  INFO UserJdbcDao:47 - method create start with: User{id=0, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 18:56:16,546  INFO UserJdbcDao:81 - method setStatement start
+2018-11-04 18:56:16,546 ERROR UserJdbcDao:56 - method create caught SQLException
+2018-11-04 18:57:09,088  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 18:57:09,398  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 18:57:09,398  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 18:57:09,398  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 18:57:09,408  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 18:57:09,408  INFO UserJdbcDao:47 - method create start with: User{id=0, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 18:57:09,428  INFO UserJdbcDao:81 - method setStatement start
+2018-11-04 18:57:09,658  INFO UserJdbcDao:64 - method setInsertedId start
+2018-11-04 18:57:09,668  INFO UserJdbcDao:76 - method setInsertedId return id: 3
+2018-11-04 19:04:15,190  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:04:15,502  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:04:15,502  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:04:15,502  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:04:15,502  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:04:15,502  INFO UserJdbcDao:136 - method delete start with id: 0
+2018-11-04 19:05:31,373  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:05:31,705  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:05:31,705  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:05:31,705  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:05:31,705  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:05:31,705  INFO UserJdbcDao:47 - method create start with: User{id=0, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:05:31,725  INFO UserJdbcDao:81 - method setStatement start
+2018-11-04 19:05:32,015  INFO UserJdbcDao:64 - method setInsertedId start
+2018-11-04 19:05:32,025  INFO UserJdbcDao:76 - method setInsertedId return id: 4
+2018-11-04 19:05:32,025  INFO UserJdbcDao:28 - method readByEmail started with email: vasiliev@mail.com
+2018-11-04 19:05:32,025  INFO UserJdbcDao:109 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@9660f4e
+2018-11-04 19:05:32,025  INFO UserJdbcDao:125 - method madeUser return: User{id=4, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:05:32,025  INFO UserJdbcDao:136 - method delete start with id: 4
+2018-11-04 19:06:02,622  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:06:02,942  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:06:02,942  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:06:02,942  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:06:02,942  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:06:02,942  INFO UserJdbcDao:47 - method create start with: User{id=0, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:06:02,962  INFO UserJdbcDao:81 - method setStatement start
+2018-11-04 19:06:03,222  INFO UserJdbcDao:64 - method setInsertedId start
+2018-11-04 19:06:03,232  INFO UserJdbcDao:76 - method setInsertedId return id: 5
+2018-11-04 19:06:03,232  INFO UserJdbcDao:28 - method readByEmail started with email: vasiliev@mail.com
+2018-11-04 19:06:03,232  INFO UserJdbcDao:109 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@9660f4e
+2018-11-04 19:06:03,232  INFO UserJdbcDao:125 - method madeUser return: User{id=5, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:06:03,232  INFO UserJdbcDao:136 - method delete start with id: 5
+2018-11-04 19:07:08,073  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:07:08,383  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:07:08,383  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:07:08,383  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:07:08,393  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:07:08,393  INFO UserJdbcDao:47 - method create start with: User{id=0, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:07:08,403  INFO UserJdbcDao:81 - method setStatement start
+2018-11-04 19:07:08,753  INFO UserJdbcDao:64 - method setInsertedId start
+2018-11-04 19:07:08,763  INFO UserJdbcDao:76 - method setInsertedId return id: 6
+2018-11-04 19:07:08,763  INFO UserJdbcDao:28 - method readByEmail started with email: vasiliev@mail.com
+2018-11-04 19:07:08,763  INFO UserJdbcDao:109 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@9660f4e
+2018-11-04 19:07:08,763  INFO UserJdbcDao:125 - method madeUser return: User{id=6, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:07:08,763  INFO UserJdbcDao:136 - method delete start with id: 6
+2018-11-04 19:07:17,493  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:07:17,803  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:07:17,803  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:07:17,803  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:07:17,803  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:07:17,803  INFO UserJdbcDao:91 - method read started with id: 0
+2018-11-04 19:07:22,619  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:07:22,951  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:07:22,951  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:07:22,951  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:07:22,951  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:07:22,951  INFO UserJdbcDao:91 - method read started with id: 2
+2018-11-04 19:07:22,981  INFO UserJdbcDao:109 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@30b8a058
+2018-11-04 19:07:22,981  INFO UserJdbcDao:125 - method madeUser return: User{id=2, name='Petia', surname='Petrov', email='petrov@mail.com', password='1234', roleId=1}
+2018-11-04 19:07:30,687  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:07:30,989  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:07:30,989  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:07:30,989  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:07:30,989  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:07:30,989  INFO UserJdbcDao:28 - method readByEmail started with email: petrov@mail.com
+2018-11-04 19:07:31,019  INFO UserJdbcDao:109 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@30b8a058
+2018-11-04 19:07:31,019  INFO UserJdbcDao:125 - method madeUser return: User{id=2, name='Petia', surname='Petrov', email='petrov@mail.com', password='1234', roleId=1}
+2018-11-04 19:07:53,036  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:07:53,348  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:07:53,348  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:07:53,348  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:07:53,348  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:07:53,348  INFO UserJdbcDao:47 - method create start with: User{id=0, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:07:53,368  INFO UserJdbcDao:81 - method setStatement start
+2018-11-04 19:07:53,628  INFO UserJdbcDao:64 - method setInsertedId start
+2018-11-04 19:07:53,638  INFO UserJdbcDao:76 - method setInsertedId return id: 7
+2018-11-04 19:09:08,198  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:09:08,498  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:09:08,498  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:09:08,498  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:09:08,498  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:09:08,498  INFO UserJdbcDao:47 - method create start with: User{id=0, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:09:08,518  INFO UserJdbcDao:81 - method setStatement start
+2018-11-04 19:09:08,718  INFO UserJdbcDao:64 - method setInsertedId start
+2018-11-04 19:09:08,728  INFO UserJdbcDao:76 - method setInsertedId return id: 8
+2018-11-04 19:09:08,728  INFO UserJdbcDao:28 - method readByEmail started with email: petrov@mail.com
+2018-11-04 19:09:08,728  INFO UserJdbcDao:109 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@9660f4e
+2018-11-04 19:09:08,728  INFO UserJdbcDao:125 - method madeUser return: User{id=2, name='Petia', surname='Petrov', email='petrov@mail.com', password='1234', roleId=1}
+2018-11-04 19:09:08,728  INFO UserJdbcDao:136 - method delete start with id: 2
+2018-11-04 19:10:05,304  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:10:05,642  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:10:05,642  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:10:05,643  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:10:05,643  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:10:05,643  INFO UserJdbcDao:47 - method create start with: User{id=2, name='Petia', surname='Petrov', email='petrov@mail.com', password='1234', roleId=1}
+2018-11-04 19:10:05,656  INFO UserJdbcDao:81 - method setStatement start
+2018-11-04 19:10:05,906  INFO UserJdbcDao:64 - method setInsertedId start
+2018-11-04 19:10:05,926  INFO UserJdbcDao:76 - method setInsertedId return id: 9
+2018-11-04 19:10:24,414  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:10:24,734  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:10:24,734  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:10:24,734  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:10:24,734  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:10:24,734  INFO UserJdbcDao:47 - method create start with: User{id=0, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:10:24,754  INFO UserJdbcDao:81 - method setStatement start
+2018-11-04 19:10:25,134  INFO UserJdbcDao:64 - method setInsertedId start
+2018-11-04 19:10:25,144  INFO UserJdbcDao:76 - method setInsertedId return id: 10
+2018-11-04 19:10:25,144  INFO UserJdbcDao:28 - method readByEmail started with email: vasiliev@mail.com
+2018-11-04 19:10:25,144  INFO UserJdbcDao:109 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@9660f4e
+2018-11-04 19:10:25,144  INFO UserJdbcDao:125 - method madeUser return: User{id=10, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:10:25,144  INFO UserJdbcDao:136 - method delete start with id: 10
+2018-11-04 19:10:34,482  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:10:34,802  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:10:34,802  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:10:34,802  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:10:34,802  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:10:34,802  INFO UserJdbcDao:91 - method read started with id: 0
+2018-11-04 19:10:34,832  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:10:34,842  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:10:34,842  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:10:34,842  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:10:34,842  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:10:34,842  INFO UserJdbcDao:47 - method create start with: User{id=0, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:10:34,842  INFO UserJdbcDao:81 - method setStatement start
+2018-11-04 19:10:35,182  INFO UserJdbcDao:64 - method setInsertedId start
+2018-11-04 19:10:35,182  INFO UserJdbcDao:76 - method setInsertedId return id: 11
+2018-11-04 19:10:35,182  INFO UserJdbcDao:28 - method readByEmail started with email: vasiliev@mail.com
+2018-11-04 19:10:35,182  INFO UserJdbcDao:109 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@5e853265
+2018-11-04 19:10:35,182  INFO UserJdbcDao:125 - method madeUser return: User{id=11, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:10:35,182  INFO UserJdbcDao:136 - method delete start with id: 11
+2018-11-04 19:10:35,482  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:10:35,482  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:10:35,482  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:10:35,492  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:10:35,492  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:10:35,492  INFO UserJdbcDao:47 - method create start with: User{id=0, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:10:35,492  INFO UserJdbcDao:81 - method setStatement start
+2018-11-04 19:10:35,672  INFO UserJdbcDao:64 - method setInsertedId start
+2018-11-04 19:10:35,672  INFO UserJdbcDao:76 - method setInsertedId return id: 12
+2018-11-04 19:10:35,672  INFO UserJdbcDao:28 - method readByEmail started with email: vasiliev@mail.com
+2018-11-04 19:10:35,672  INFO UserJdbcDao:109 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@1e6d1014
+2018-11-04 19:10:35,672  INFO UserJdbcDao:125 - method madeUser return: User{id=12, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:10:35,672  INFO UserJdbcDao:136 - method delete start with id: 12
+2018-11-04 19:10:35,842  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:10:35,842  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:10:35,842  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:10:35,842  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:10:35,842  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:10:35,842  INFO UserJdbcDao:91 - method read started with id: 2
+2018-11-04 19:10:35,852  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:10:35,852  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:10:35,852  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:10:35,862  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:10:35,862  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:10:35,862  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:10:35,862  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:10:35,862  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:10:35,862  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:10:35,862  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:10:35,862  INFO UserJdbcDao:28 - method readByEmail started with email: petrov@mail.com
+2018-11-04 19:10:35,862  INFO UserJdbcDao:109 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@184f6be2
+2018-11-04 19:10:35,862  INFO UserJdbcDao:125 - method madeUser return: User{id=9, name='Petia', surname='Petrov', email='petrov@mail.com', password='1234', roleId=1}
+2018-11-04 19:10:53,894  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:10:54,204  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:10:54,204  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:10:54,204  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:10:54,204  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:10:54,204  INFO UserJdbcDao:91 - method read started with id: 0
+2018-11-04 19:10:54,234  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:10:54,234  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:10:54,234  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:10:54,244  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:10:54,244  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:10:54,244  INFO UserJdbcDao:47 - method create start with: User{id=0, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:10:54,244  INFO UserJdbcDao:81 - method setStatement start
+2018-11-04 19:10:54,454  INFO UserJdbcDao:64 - method setInsertedId start
+2018-11-04 19:10:54,464  INFO UserJdbcDao:76 - method setInsertedId return id: 13
+2018-11-04 19:10:54,464  INFO UserJdbcDao:28 - method readByEmail started with email: vasiliev@mail.com
+2018-11-04 19:10:54,464  INFO UserJdbcDao:109 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@5e853265
+2018-11-04 19:10:54,464  INFO UserJdbcDao:125 - method madeUser return: User{id=13, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:10:54,464  INFO UserJdbcDao:136 - method delete start with id: 13
+2018-11-04 19:10:54,654  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:10:54,654  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:10:54,654  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:10:54,654  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:10:54,654  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:10:54,654  INFO UserJdbcDao:47 - method create start with: User{id=0, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:10:54,654  INFO UserJdbcDao:81 - method setStatement start
+2018-11-04 19:10:54,884  INFO UserJdbcDao:64 - method setInsertedId start
+2018-11-04 19:10:54,884  INFO UserJdbcDao:76 - method setInsertedId return id: 14
+2018-11-04 19:10:54,884  INFO UserJdbcDao:28 - method readByEmail started with email: vasiliev@mail.com
+2018-11-04 19:10:54,884  INFO UserJdbcDao:109 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@1e6d1014
+2018-11-04 19:10:54,884  INFO UserJdbcDao:125 - method madeUser return: User{id=14, name='Vasia', surname='Vasiliev', email='vasiliev@mail.com', password='456321', roleId=1}
+2018-11-04 19:10:54,884  INFO UserJdbcDao:136 - method delete start with id: 14
+2018-11-04 19:10:55,034  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:10:55,034  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:10:55,034  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:10:55,034  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:10:55,034  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:10:55,034  INFO UserJdbcDao:91 - method read started with id: 9
+2018-11-04 19:10:55,034  INFO UserJdbcDao:109 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@694e1548
+2018-11-04 19:10:55,034  INFO UserJdbcDao:125 - method madeUser return: User{id=9, name='Petia', surname='Petrov', email='petrov@mail.com', password='1234', roleId=1}
+2018-11-04 19:10:55,034  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:10:55,044  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:10:55,044  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:10:55,044  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:10:55,044  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:10:55,044  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 19:10:55,054  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 19:10:55,054  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 19:10:55,054  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 19:10:55,054  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, readInsertedId=select max(id) as id from user;, insert=insert into user(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);, delete=DELETE FROM user WHERE id = ?;}
+2018-11-04 19:10:55,054  INFO UserJdbcDao:28 - method readByEmail started with email: petrov@mail.com
+2018-11-04 19:10:55,054  INFO UserJdbcDao:109 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@711f39f9
+2018-11-04 19:10:55,054  INFO UserJdbcDao:125 - method madeUser return: User{id=9, name='Petia', surname='Petrov', email='petrov@mail.com', password='1234', roleId=1}

@@ -133,6 +133,14 @@ public class UserJdbcDao implements UserDao<User, Integer> {
 
     @Override
     public boolean delete(Integer entityId) {
-        return false;
+        LOGGER.info("method delete start with id: " + entityId);
+        boolean result = false;
+        try (PreparedStatement statement = connection.prepareStatement(properties.getProperty("delete"))){
+            statement.setInt(1, entityId);
+            result = statement.executeUpdate() == 1;
+        } catch (SQLException e) {
+            LOGGER.error("method delete caught SQLException");
+        }
+        return result;
     }
 }

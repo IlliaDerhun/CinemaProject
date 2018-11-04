@@ -14,14 +14,21 @@ import static org.junit.Assert.*;
 public class UserJdbcDaoTest {
 
     private User expectedUser;
+    private User someUser;
     private UserJdbcDao userJdbcDao;
 
     @Before
     public void setUp() throws Exception {
         expectedUser = new User.Builder("Petia", "petrov@mail.com")
-                .userId(2)
+                .userId(9)
                 .surname("Petrov")
                 .password("1234")
+                .roleId(1)
+                .build();
+
+        someUser = new User.Builder("Vasia", "vasiliev@mail.com")
+                .surname("Vasiliev")
+                .password("456321")
                 .roleId(1)
                 .build();
 
@@ -36,17 +43,13 @@ public class UserJdbcDaoTest {
 
     @Test
     public void create() {
-        User someUser = new User.Builder("Vasia", "vasiliev@mail.com")
-                .surname("Vasiliev")
-                .password("456321")
-                .roleId(1)
-                .build();
         assertTrue(userJdbcDao.create(someUser));
+        userJdbcDao.delete(userJdbcDao.readByEmail("vasiliev@mail.com").getId());
     }
 
     @Test
     public void readShouldReturnValidEntityByValidId() {
-        User actualUser = userJdbcDao.read(2);
+        User actualUser = userJdbcDao.read(9);
         assertEquals(expectedUser, actualUser);
     }
 
@@ -58,9 +61,13 @@ public class UserJdbcDaoTest {
 
     @Test
     public void update() {
+
     }
 
     @Test
     public void delete() {
+        userJdbcDao.create(someUser);
+        someUser = userJdbcDao.readByEmail("vasiliev@mail.com");
+        assertTrue(userJdbcDao.delete(someUser.getId()));
     }
 }
