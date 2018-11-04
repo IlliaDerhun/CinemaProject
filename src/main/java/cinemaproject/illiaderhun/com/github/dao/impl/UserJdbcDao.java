@@ -44,7 +44,46 @@ public class UserJdbcDao implements UserDao<User, Integer> {
 
     @Override
     public boolean create(User theEntity) {
-        return false;
+        LOGGER.info("method create start with: " + theEntity);
+        boolean result = false;
+
+        try(PreparedStatement statement = connection.prepareStatement(properties.getProperty("insert"))) {
+            setStatement(statement, theEntity);
+            statement.executeUpdate();
+            theEntity.setId(setInsertedId());
+            result = true;
+        } catch (SQLException e) {
+            LOGGER.error("method create caught SQLException");
+            LOGGER.trace(e);
+        }
+
+        return result;
+    }
+
+    private Integer setInsertedId() {
+        LOGGER.info("method setInsertedId start");
+        Integer userId = 0;
+        try (PreparedStatement statement = connection.prepareStatement(properties.getProperty("readInsertedId"))){
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet != null && resultSet.next()) {
+                userId = resultSet.getInt("id");
+            }
+        } catch (SQLException e) {
+            LOGGER.error("method setInsertedId caught SQLException");
+            LOGGER.trace(e);
+        }
+
+        LOGGER.info("method setInsertedId return id: " + userId);
+        return userId;
+    }
+
+    private void setStatement(PreparedStatement statement, User theEntity) throws SQLException {
+        LOGGER.info("method setStatement start");
+        statement.setString(1, theEntity.getName());
+        statement.setString(2, theEntity.getSurname());
+        statement.setString(3, theEntity.getEmail());
+        statement.setString(4, theEntity.getPassword());
+        statement.setInt(5, theEntity.getRoleId());
     }
 
     @Override

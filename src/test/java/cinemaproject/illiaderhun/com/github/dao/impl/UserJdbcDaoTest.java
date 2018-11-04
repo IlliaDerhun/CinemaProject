@@ -36,6 +36,12 @@ public class UserJdbcDaoTest {
 
     @Test
     public void create() {
+        User someUser = new User.Builder("Vasia", "vasiliev@mail.com")
+                .surname("Vasiliev")
+                .password("456321")
+                .roleId(1)
+                .build();
+        assertTrue(userJdbcDao.create(someUser));
     }
 
     @Test
