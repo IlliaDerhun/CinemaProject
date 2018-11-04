@@ -29,7 +29,9 @@ public class UserJdbcDaoTest {
     }
 
     @Test
-    public void readByEmail() {
+    public void readByEmailShouldReturnValidEntityByValidEmail() {
+        User actualUser = userJdbcDao.readByEmail("petrov@mail.com");
+        assertEquals(expectedUser, actualUser);
     }
 
     @Test
@@ -40,6 +42,12 @@ public class UserJdbcDaoTest {
     public void readShouldReturnValidEntityByValidId() {
         User actualUser = userJdbcDao.read(2);
         assertEquals(expectedUser, actualUser);
+    }
+
+    @Test
+    public void readShouldReturnNullByInvalidId() {
+        User actualUser = userJdbcDao.read(0);
+        assertNull(actualUser);
     }
 
     @Test

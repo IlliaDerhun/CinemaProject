@@ -1,1 +1,268 @@
-2018-10-13 21:13:21,130 ERROR cinemaproject.illiaderhun.com.github.Main:27 - servletConnection caught NamingException
+2018-11-04 17:07:25,929  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:07:26,380  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:07:26,380  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:07:26,380  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:07:26,380  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:07:26,380  INFO UserJdbcDao:41 - method read started with entityI: 2
+2018-11-04 17:07:26,429 ERROR UserJdbcDao:51 - method read caught SQLException
+2018-11-04 17:09:24,593  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:09:24,995  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:09:24,995  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:09:24,995  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:09:24,995  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:09:24,995  INFO UserJdbcDao:41 - method read started with entityI: 2
+2018-11-04 17:11:16,915 ERROR UserJdbcDao:51 - method read caught SQLException
+2018-11-04 17:13:17,626  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:13:17,906  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:13:17,906  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:13:17,906  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:13:17,906  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:13:17,906  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:13:17,906  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:13:17,906  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:13:17,916  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:13:17,916  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:14:27,966  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:14:28,246  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:14:28,246  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:14:28,256  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:14:28,256  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:14:28,256  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:14:28,256  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:14:28,256  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:14:28,256  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:14:28,256  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:14:50,102  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:14:50,402  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:14:50,402  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:14:50,402  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:14:50,402  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:14:50,402  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:14:50,412  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:14:50,412  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:14:50,412  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:14:50,412  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:16:25,999  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:16:26,309  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:16:26,309  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:16:26,309  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:16:26,309  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:16:26,309  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:16:26,309  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:16:26,309  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:16:26,309  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:16:26,309  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:16:42,113  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:16:42,383  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:16:42,393  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:16:42,393  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:16:42,393  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id=?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:16:42,393  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:16:42,393  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:16:42,393  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:16:42,393  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:16:42,393  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id=?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:16:52,469  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:16:52,769  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:16:52,769  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:16:52,769  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:16:52,769  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id=?, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:16:52,769  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:16:52,769  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:16:52,769  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:16:52,769  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:16:52,769  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id=?, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:17:13,831  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:17:14,121  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:17:14,121  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:17:14,121  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:17:14,121  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:17:14,121  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:17:14,131  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:17:14,131  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:17:14,131  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:17:14,131  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:17:31,122  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:17:31,422  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:17:31,422  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:17:31,422  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:17:31,422  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE `id` = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:17:31,422  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:17:31,432  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:17:31,432  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:17:31,432  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:17:31,432  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE `id` = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:17:43,648  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:17:43,938  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:17:43,938  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:17:43,938  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:17:43,938  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM `user` WHERE `id` = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:17:43,938  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:17:43,938  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:17:43,938  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:17:43,938  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:17:43,938  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM `user` WHERE `id` = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:18:17,875  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:18:18,175  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:18:18,185  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:18:18,185  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:18:18,185  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:18:18,185  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:18:18,185  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:18:18,185  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:18:18,185  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:18:18,185  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:19:36,493  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:19:36,783  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:19:36,783  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:19:36,783  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:19:36,783  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:19:36,783  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:19:36,783  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:19:36,793  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:19:36,793  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:19:36,793  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:19:36,793  INFO UserJdbcDao:41 - method read started with entityI: 2
+2018-11-04 17:19:36,823 ERROR UserJdbcDao:51 - method read caught SQLException
+2018-11-04 17:23:59,594  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:23:59,894  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:23:59,894  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:23:59,894  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:23:59,894  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:23:59,894  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:23:59,894  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:23:59,894  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:23:59,894  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:23:59,894  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:24:25,192  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:24:25,472  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:24:25,472  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:24:25,472  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:24:25,472  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:24:25,472  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:24:25,482  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:24:25,482  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:24:25,482  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:24:25,482  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:24:45,096  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:24:45,386  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:24:45,386  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:24:45,386  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:24:45,386  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:24:45,386  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:24:45,386  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:24:45,386  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:24:45,386  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:24:45,386  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:24:57,688  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:24:57,978  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:24:57,978  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:24:57,978  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:24:57,978  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:24:57,978  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:24:57,988  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:24:57,988  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:24:57,988  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:24:57,988  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:25:50,194  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:25:50,494  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:25:50,494  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:25:50,494  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:25:50,494  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE user_id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:25:50,494  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:25:50,504  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:25:50,504  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:25:50,504  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:25:50,504  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE user_id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:26:28,819  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:26:28,819  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:26:28,819  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:26:28,819  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE user_id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:26:40,908  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:26:40,908  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:26:40,908  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:26:40,908  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE user_id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:27:55,113  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:27:55,443  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:27:55,443  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:27:55,443  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:27:55,443  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user WHERE user_id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:28:48,940  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:29:42,363  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:31:20,525  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:34:30,602  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:35:12,807  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:35:22,701  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:35:42,730  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:36:03,239  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:36:03,523  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:36:03,523  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:36:03,524  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:36:03,524  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM cinema.user where user_id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:36:03,524  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:36:03,529  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:36:03,530  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:36:03,530  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:36:03,530  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM cinema.user where user_id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:36:13,412  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:36:13,701  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:36:13,701  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:36:13,702  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:36:13,702  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where user_id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:36:13,702  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:36:13,708  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:36:13,708  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:36:13,708  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:36:13,709  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where user_id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:36:43,907  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:36:44,190  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:36:44,190  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:36:44,190  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:36:44,191  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM cinema.user where user_id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 17:36:44,191  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 17:36:44,196  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 17:36:44,196  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 17:36:44,197  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 17:36:44,197  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM cinema.user where user_id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 18:28:09,528  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 18:28:09,858  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 18:28:09,858  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 18:28:09,859  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 18:28:09,859  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 18:28:09,860  INFO UserJdbcDao:38 - method read started with id: 2
+2018-11-04 18:28:09,899  INFO UserJdbcDao:56 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@30b8a058
+2018-11-04 18:28:09,900  INFO UserJdbcDao:72 - method madeUser return: User{id=2, name='Petia', surname='Petrov', email='petrov@mail.com', password='1234', roleId=1}
+2018-11-04 18:28:39,092  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 18:28:39,432  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 18:28:39,432  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 18:28:39,432  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 18:28:39,433  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 18:28:39,433  INFO UserJdbcDao:38 - method read started with id: 2
+2018-11-04 18:28:39,464  INFO UserJdbcDao:56 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@30b8a058
+2018-11-04 18:28:39,465  INFO UserJdbcDao:72 - method madeUser return: User{id=2, name='Petia', surname='Petrov', email='petrov@mail.com', password='1234', roleId=1}
+2018-11-04 18:30:30,075  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 18:30:30,417  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 18:30:30,418  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 18:30:30,418  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 18:30:30,418  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 18:30:30,419  INFO UserJdbcDao:38 - method read started with id: 0
+2018-11-04 18:31:14,459  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 18:31:14,806  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 18:31:14,807  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 18:31:14,807  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 18:31:14,808  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 18:31:14,808  INFO UserJdbcDao:38 - method read started with id: 0
+2018-11-04 18:31:30,414  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 18:31:30,728  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 18:31:30,728  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 18:31:30,729  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 18:31:30,729  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 18:31:30,729  INFO UserJdbcDao:38 - method read started with id: 0
+2018-11-04 18:34:28,613  INFO ConnectionManager:17 - method getConnection started with no parameters
+2018-11-04 18:34:28,932  INFO QueriesManager:14 - method getProperties start with parameter: user
+2018-11-04 18:34:28,932  INFO QueriesManager:17 - generated path: queries/user/queries.properties
+2018-11-04 18:34:28,932  INFO QueriesManager:24 - properties has been loaded
+2018-11-04 18:34:28,933  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM user where id = ?;, selectByEmail=SELECT * FROM user WHERE email = ?, insert=insert into `user`(name, surname, email, password, role_id) value(?, ?, ?, ?, ?);}
+2018-11-04 18:34:28,933  INFO UserJdbcDao:28 - method readByEmail started with email: petrov@mail.com
+2018-11-04 18:34:28,965  INFO UserJdbcDao:70 - method madeUser started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@30b8a058
+2018-11-04 18:34:28,966  INFO UserJdbcDao:86 - method madeUser return: User{id=2, name='Petia', surname='Petrov', email='petrov@mail.com', password='1234', roleId=1}

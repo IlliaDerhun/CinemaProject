@@ -25,7 +25,21 @@ public class UserJdbcDao implements UserDao<User, Integer> {
 
     @Override
     public User readByEmail(String email) {
-        return null;
+        LOGGER.info("method readByEmail started with email: " + email);
+        User theUser = null;
+
+        try(PreparedStatement statement = connection.prepareStatement(properties.getProperty("selectByEmail"))) {
+            statement.setString(1, email);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet != null && resultSet.next()) {
+                theUser = madeUser(resultSet);
+            }
+        } catch (SQLException e) {
+            LOGGER.error("method readByEmail caught SQLException");
+            LOGGER.trace(e);
+        }
+
+        return theUser;
     }
 
     @Override
