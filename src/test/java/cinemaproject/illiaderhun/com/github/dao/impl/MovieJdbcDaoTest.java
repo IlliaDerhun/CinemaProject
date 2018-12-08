@@ -1,6 +1,7 @@
 package cinemaproject.illiaderhun.com.github.dao.impl;
 
 import cinemaproject.illiaderhun.com.github.dao.entities.Movie;
+import cinemaproject.illiaderhun.com.github.service.MovieService;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +11,7 @@ public class MovieJdbcDaoTest {
 
     private Movie expectedMovie;
     private Movie someMovie;
-    private MovieJdbcDao movieJdbcDao;
+    private MovieService movieService;
 
     @Before
     public void setUp() throws Exception {
@@ -31,45 +32,45 @@ public class MovieJdbcDaoTest {
 
         someMovie.setPrice(75.00);
 
-        movieJdbcDao = new MovieJdbcDao();
+        movieService = new MovieService();
     }
 
     @Test
     public void readByTitle() {
-        assertEquals(expectedMovie, movieJdbcDao.readByTitle("Мистер Бин"));
+        assertEquals(expectedMovie, movieService.readByTitle("Мистер Бин"));
     }
 
     @Test
     public void readByScheduleId() {
-        assertEquals(expectedMovie, movieJdbcDao.readByScheduleId(1));
+        assertEquals(expectedMovie, movieService.readByScheduleId(1));
     }
 
     @Test
     public void create() {
-        assertTrue(movieJdbcDao.create(someMovie));
-        movieJdbcDao.delete(someMovie.getId());
+        assertTrue(movieService.create(someMovie));
+        movieService.delete(someMovie.getId());
     }
 
     @Test
     public void read() {
-        assertEquals(expectedMovie, movieJdbcDao.read(1));
+        assertEquals(expectedMovie, movieService.read(1));
     }
 
     @Test
     public void update() {
-        movieJdbcDao.create(someMovie);
+        movieService.create(someMovie);
         someMovie.setDescription("Yet another description");
         someMovie.setTitle("Yet another title");
         someMovie.setPrice(8.45);
         someMovie.setTime("00:59:59");
-        movieJdbcDao.update(someMovie);
-        assertEquals(someMovie, movieJdbcDao.read(someMovie.getId()));
-        movieJdbcDao.delete(someMovie.getId());
+        movieService.update(someMovie);
+        assertEquals(someMovie, movieService.read(someMovie.getId()));
+        movieService.delete(someMovie.getId());
     }
 
     @Test
     public void delete() {
-        movieJdbcDao.create(someMovie);
-        assertTrue(movieJdbcDao.delete(someMovie.getId()));
+        movieService.create(someMovie);
+        assertTrue(movieService.delete(someMovie.getId()));
     }
 }

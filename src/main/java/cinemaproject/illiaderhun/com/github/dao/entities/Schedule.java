@@ -114,7 +114,7 @@ public class Schedule {
 
     @Override
     public String toString() {
-        return "Schedule{" +
+        return "ScheduleService{" +
                 "id=" + id +
                 ", dateTime=" + dateTime +
                 ", dayOfWeek='" + dayOfWeek + '\'' +

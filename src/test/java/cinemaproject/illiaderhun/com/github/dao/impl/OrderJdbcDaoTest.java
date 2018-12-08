@@ -1,7 +1,7 @@
 package cinemaproject.illiaderhun.com.github.dao.impl;
 
 import cinemaproject.illiaderhun.com.github.dao.entities.Order;
-import cinemaproject.illiaderhun.com.github.dao.entities.Schedule;
+import cinemaproject.illiaderhun.com.github.service.OrderService;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +11,7 @@ public class OrderJdbcDaoTest {
 
     private Order expectedOrder;
     private Order someOrder;
-    private OrderJdbcDao orderJdbcDao;
+    private OrderService orderService;
 
     @Before
     public void setUp() throws Exception {
@@ -19,39 +19,39 @@ public class OrderJdbcDaoTest {
 
         someOrder = new Order(0, 1, 3, 9, 1);
 
-        orderJdbcDao = new OrderJdbcDao();
+        orderService = new OrderService();
     }
 
     @Test
     public void readByUserId() {
-        assertEquals(expectedOrder, orderJdbcDao.readByUserId(9));
+        assertEquals(expectedOrder, orderService.readByUserId(9));
     }
 
     @Test
     public void create() {
-        assertTrue(orderJdbcDao.create(someOrder));
-        orderJdbcDao.delete(someOrder.getId());
+        assertTrue(orderService.create(someOrder));
+        orderService.delete(someOrder.getId());
     }
 
     @Test
     public void read() {
-        assertEquals(expectedOrder, orderJdbcDao.read(4));
+        assertEquals(expectedOrder, orderService.read(4));
     }
 
     @Test
     public void update() {
-        orderJdbcDao.create(someOrder);
+        orderService.create(someOrder);
         someOrder.setCol(78);
         someOrder.setRow(87);
-        orderJdbcDao.update(someOrder);
-        assertEquals(someOrder, orderJdbcDao.read(someOrder.getId()));
-        orderJdbcDao.delete(someOrder.getId());
+        orderService.update(someOrder);
+        assertEquals(someOrder, orderService.read(someOrder.getId()));
+        orderService.delete(someOrder.getId());
     }
 
     @Test
     public void delete() {
-        orderJdbcDao.create(someOrder);
-        someOrder = orderJdbcDao.read(someOrder.getId());
-        assertTrue(orderJdbcDao.delete(someOrder.getId()));
+        orderService.create(someOrder);
+        someOrder = orderService.read(someOrder.getId());
+        assertTrue(orderService.delete(someOrder.getId()));
     }
 }

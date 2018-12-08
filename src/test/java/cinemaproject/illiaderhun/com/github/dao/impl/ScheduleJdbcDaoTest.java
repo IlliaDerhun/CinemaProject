@@ -1,6 +1,7 @@
 package cinemaproject.illiaderhun.com.github.dao.impl;
 
 import cinemaproject.illiaderhun.com.github.dao.entities.Schedule;
+import cinemaproject.illiaderhun.com.github.service.ScheduleService;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,7 +14,7 @@ public class ScheduleJdbcDaoTest {
 
     private Schedule expectedSchedule;
     private Schedule someSchedule;
-    private ScheduleJdbcDao scheduleJdbcDao;
+    private ScheduleService scheduleService;
 
     @Before
     public void setUp() throws Exception {
@@ -28,33 +29,33 @@ public class ScheduleJdbcDaoTest {
                 .setOrderId(1)
                 .build();
 
-        scheduleJdbcDao = new ScheduleJdbcDao();
+        scheduleService = new ScheduleService();
     }
 
     @Test
     public void create() {
-        assertTrue(scheduleJdbcDao.create(someSchedule));
-        scheduleJdbcDao.delete(someSchedule.getId());
+        assertTrue(scheduleService.create(someSchedule));
+        scheduleService.delete(someSchedule.getId());
     }
 
     @Test
     public void readShouldReturnValidEntityByValidId() {
-        Schedule actualSchedule = scheduleJdbcDao.read(1);
+        Schedule actualSchedule = scheduleService.read(1);
         assertEquals(expectedSchedule.toString(), actualSchedule.toString());
     }
 
 
     @Test
     public void update() {
-        scheduleJdbcDao.create(someSchedule);
+        scheduleService.create(someSchedule);
         someSchedule.setDayOfWeek("Friday");
-        assertTrue(scheduleJdbcDao.update(someSchedule));
-        scheduleJdbcDao.delete(someSchedule.getId());
+        assertTrue(scheduleService.update(someSchedule));
+        scheduleService.delete(someSchedule.getId());
     }
 
     @Test
     public void delete() {
-        scheduleJdbcDao.create(someSchedule);
-        assertTrue(scheduleJdbcDao.delete(someSchedule.getId()));
+        scheduleService.create(someSchedule);
+        assertTrue(scheduleService.delete(someSchedule.getId()));
     }
 }
