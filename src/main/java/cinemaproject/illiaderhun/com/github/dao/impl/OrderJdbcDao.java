@@ -11,6 +11,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 public class OrderJdbcDao implements OrderDao<Order, Integer> {
@@ -25,7 +27,7 @@ public class OrderJdbcDao implements OrderDao<Order, Integer> {
 
     @Override
     public Order readByUserId(Integer userId) {
-        LOGGER.info("method read started with id: " + userId);
+        LOGGER.info("method readByUserId started with id: " + userId);
         Order theOrder = null;
 
         try(PreparedStatement statement = connection.prepareStatement(properties.getProperty("selectByUserId"))) {
@@ -35,11 +37,32 @@ public class OrderJdbcDao implements OrderDao<Order, Integer> {
                 theOrder = madeOrder(resultSet);
             }
         } catch (SQLException e) {
-            LOGGER.error("method read caught SQLException");
+            LOGGER.error("method readByUserId caught SQLException");
             LOGGER.trace(e);
         }
 
         return theOrder;
+    }
+
+    @Override
+    public ArrayList<Order> readByScheduleId(Integer scheduleId) {
+        LOGGER.info("method readByScheduleId started with id: " + scheduleId);
+        ArrayList<Order> orders = new ArrayList<>();
+        scheduleId = read(scheduleId).getScheduleId();
+        try(PreparedStatement statement = connection.prepareStatement(properties.getProperty("selectByScheduleId"))) {
+            statement.setInt(1, scheduleId);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet != null && resultSet.next()) {
+                do {
+                    orders.add(madeOrder(resultSet));
+                } while (resultSet.next()) ;
+            }
+        } catch (SQLException e) {
+            LOGGER.error("method readByScheduleId caught SQLException");
+            LOGGER.trace(e);
+        }
+
+        return orders;
     }
 
     private Order madeOrder(ResultSet resultSet) throws SQLException {

@@ -5,6 +5,8 @@ import cinemaproject.illiaderhun.com.github.dao.impl.OrderJdbcDao;
 import cinemaproject.illiaderhun.com.github.dao.interfaces.OrderDao;
 import org.apache.log4j.Logger;
 
+import java.util.ArrayList;
+
 public class OrderService implements OrderDao<Order, Integer> {
 
     private static final Logger LOGGER = Logger.getLogger(OrderService.class.getSimpleName());
@@ -15,6 +17,13 @@ public class OrderService implements OrderDao<Order, Integer> {
         LOGGER.info("method readByUserId start with id: " + userId);
         checkOrderJdbcDaoAndCreateIfDoesntExist();
         return orderJdbcDao.readByUserId(userId);
+    }
+
+    @Override
+    public ArrayList<Order> readByScheduleId(Integer scheduleId) {
+        LOGGER.info("method readByScheduleId start with id: " + scheduleId);
+        checkOrderJdbcDaoAndCreateIfDoesntExist();
+        return orderJdbcDao.readByScheduleId(scheduleId);
     }
 
     @Override

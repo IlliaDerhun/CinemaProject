@@ -28,6 +28,11 @@ public class OrderJdbcDaoTest {
     }
 
     @Test
+    public void readByScheduleId() {
+        System.out.println(orderService.readByScheduleId(1));
+    }
+
+    @Test
     public void create() {
         assertTrue(orderService.create(someOrder));
         orderService.delete(someOrder.getId());

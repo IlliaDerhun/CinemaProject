@@ -1,16 +1,14 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Link
-  Date: 29.09.2018
-  Time: 13:06
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Hello from jsp</title>
-</head>
-<body>
-    <h1>Hello from jsp and servlet Ыш</h1>
-</body>
-</html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="s" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<c:set var="theLocale"
+       value="${not empty param.theLocale ? param.theLocale : theLocale}"
+       scope="session"/>
+<fmt:setLocale value="${theLocale}"/>
+<fmt:setBundle basename="cinemaproject.illiaderhun.com.github.i18n"/>
+
+<%@include file="html/header.html"%>
+<%@include file="html/body.html"%>
+<%@include file="html/footer.html"%>

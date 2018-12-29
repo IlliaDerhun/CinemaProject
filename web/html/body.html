@@ -1,0 +1,38 @@
+<c:set var="photoPath"
+       value="${not empty param.photoPath ? param.photoPath : movie.poster}"
+       scope="session"/>
+
+<h3><c:out value="${movie.title}"/></h3>
+<p><b><fmt:message key="index.title"/>:</b> <c:out value="${movie.title}"/></p>
+<p><b><fmt:message key="index.description"/>:</b> <c:out value="${movie.description}"/></p>
+<p><b><fmt:message key="index.time"/>:</b> <c:out value="${movie.time}"/></p>
+<p><b><fmt:message key="index.price"/>:</b> <c:out value="${movie.price}"/></p>
+<img src="${photoPath}.jpg" width="500px" height="450px" style="float:left;"/>
+<br/>
+<br/>
+<c:set var = "busy" scope = "session" value = "chair"/>
+<div>
+
+    <c:forEach var = "i" begin = "1" end = "5">
+        <fmt:message key="index.row"/> ${i}
+        <c:forEach var = "j" begin = "1" end = "5">
+
+            <c:forEach var="tempPlaces" items="${places}">
+
+                <c:choose>
+                    <c:when test="${j == tempPlaces.col && i == tempPlaces.row}">
+                        <c:set var = "busy" scope = "session" value = "user"/>
+                    </c:when>
+                </c:choose>
+
+            </c:forEach>
+
+            <img src=images/hall/${busy}.jpg width="75" height="75px" />
+            <c:set var = "busy" scope = "session" value = "chair"/>
+
+        </c:forEach>
+        <br/>
+    </c:forEach>
+
+</div>
+
