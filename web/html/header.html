@@ -21,9 +21,19 @@
                 <li><a href="index.jsp"><fmt:message key="index.contact"/></a></li>
             </ul>
             <ul class="nav navbar-nav login">
-                <li><a href="index.jsp"><fmt:message key="index.logout"/></a></li>
-                <li><a href="index.jsp"><fmt:message key="index.login"/></a></li>
-                <li><a href="index.jsp"><fmt:message key="index.register"/></a></li>
+                <c:choose>
+                    <c:when test="${sessionScope.userRole>0}">
+                        <li><a href="logout.jsp"><fmt:message key="index.logout"/></a></li>
+                        <c:url var="userPageLink" value="ControllerDispatcherServlet">
+                            <c:param name="command" value="USER_PAGE"/>
+                        </c:url>
+                        <li><a href="${userPageLink}"><fmt:message key="label.userPage"/></a></li>
+                    </c:when>
+                    <c:otherwise>
+                        <li><a href="login.jsp"><fmt:message key="index.login"/></a></li>
+                        <li><a href="register.jsp"><fmt:message key="label.register"/></a></li>
+                    </c:otherwise>
+                </c:choose>
             </ul>
             <ul class="nav navbar-nav language">
                 <li><a href="?theLocale=ru_RU"><img src="images/ru.png"></a></li>

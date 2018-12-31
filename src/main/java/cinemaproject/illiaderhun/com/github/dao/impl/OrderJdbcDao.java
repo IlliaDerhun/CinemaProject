@@ -26,22 +26,24 @@ public class OrderJdbcDao implements OrderDao<Order, Integer> {
     private Properties properties = QueriesManager.getProperties("order");
 
     @Override
-    public Order readByUserId(Integer userId) {
+    public  ArrayList<Order> readByUserId(Integer userId) {
         LOGGER.info("method readByUserId started with id: " + userId);
-        Order theOrder = null;
+        ArrayList<Order> theOrders = null;
 
         try(PreparedStatement statement = connection.prepareStatement(properties.getProperty("selectByUserId"))) {
             statement.setInt(1, userId);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet != null && resultSet.next()) {
-                theOrder = madeOrder(resultSet);
+                do {
+                    theOrders.add(madeOrder(resultSet));
+                } while (resultSet.next()) ;
             }
         } catch (SQLException e) {
             LOGGER.error("method readByUserId caught SQLException");
             LOGGER.trace(e);
         }
 
-        return theOrder;
+        return theOrders;
     }
 
     @Override

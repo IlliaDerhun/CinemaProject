@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public interface OrderDao<Order, Integer> extends Dao<Order, Integer> {
 
-    Order readByUserId(Integer userId);
+    ArrayList<Order> readByUserId(Integer userId);
     ArrayList<Order> readByScheduleId(Integer scheduleId);
 
 }

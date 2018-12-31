@@ -1,0 +1,21 @@
+<link href="css/userPage.css" rel="stylesheet">
+<div class="userInfo">
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th><fmt:message key="label.name"/></th>
+                <th><fmt:message key="label.surname"/></th>
+                <th><fmt:message key="label.email"/></th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>${sessionScope.firstName}</td>
+                    <td>${sessionScope.lastName}</td>
+                    <td>${sessionScope.email}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

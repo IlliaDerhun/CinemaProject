@@ -13,7 +13,7 @@ public class OrderService implements OrderDao<Order, Integer> {
     private OrderJdbcDao orderJdbcDao;
 
     @Override
-    public Order readByUserId(Integer userId) {
+    public ArrayList<Order> readByUserId(Integer userId) {
         LOGGER.info("method readByUserId start with id: " + userId);
         checkOrderJdbcDaoAndCreateIfDoesntExist();
         return orderJdbcDao.readByUserId(userId);

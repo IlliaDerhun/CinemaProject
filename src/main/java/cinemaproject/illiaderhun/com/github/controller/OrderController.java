@@ -11,17 +11,7 @@ public class OrderController {
         return new OrderService().readByScheduleId(scheduleId);
     }
 
-    public ArrayList<Integer> getRowPlace (int scheduleId) {
-        ArrayList<Integer> rowPlaces = new ArrayList<>();
-        getOrderForIndexPage(scheduleId).stream()
-                .forEach(row -> rowPlaces.add(row.getRow()));
-        return rowPlaces;
+    public ArrayList<Order> getCustomerOrders(Integer userId) {
+        return new OrderService().readByScheduleId(userId);
     }
-    public ArrayList<Integer> getColPlace (int scheduleId) {
-        ArrayList<Integer> colPlaces = new ArrayList<>();
-        getOrderForIndexPage(scheduleId).stream()
-                .forEach(row -> colPlaces.add(row.getCol()));
-        return colPlaces;
-    }
-
 }
