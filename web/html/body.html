@@ -7,7 +7,7 @@
 <p><b><fmt:message key="index.description"/>:</b> <c:out value="${movie.description}"/></p>
 <p><b><fmt:message key="index.time"/>:</b> <c:out value="${movie.time}"/></p>
 <p><b><fmt:message key="index.price"/>:</b> <c:out value="${movie.price}"/></p>
-<img src="${photoPath}.jpg" width="500px" height="450px" style="float:left;"/>
+<img src="images/posters/${photoPath}" width="500px" height="450px" style="float:left;"/>
 <br/>
 <br/>
 <c:set var = "busy" scope = "session" value = "chair"/>
@@ -33,6 +33,16 @@
         </c:forEach>
         <br/>
     </c:forEach>
+
+    <form action="/ControllerDispatcherServlet" method="post">
+        <input type="hidden" name="command" value="MAKE_ORDER">
+        <input type="hidden" name="movieId" value="${movie.id}">
+        <tr>
+            <td><input type="number" name="row" maxlength="256" required placeholder="<fmt:message key='index.row'/>"/></td>
+            <td><input type="number" name="col" maxlength="256" required placeholder="<fmt:message key='label.col'/>"/></td>
+            <td><input type="submit" value="<fmt:message key='label.add'/>"/></td>
+        </tr>
+    </form>
 
 </div>
 

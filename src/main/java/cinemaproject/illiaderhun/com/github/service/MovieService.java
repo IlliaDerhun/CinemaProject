@@ -1,9 +1,12 @@
 package cinemaproject.illiaderhun.com.github.service;
 
 import cinemaproject.illiaderhun.com.github.dao.entities.Movie;
+import cinemaproject.illiaderhun.com.github.dao.entities.Order;
 import cinemaproject.illiaderhun.com.github.dao.impl.MovieJdbcDao;
 import cinemaproject.illiaderhun.com.github.dao.interfaces.MovieDao;
 import org.apache.log4j.Logger;
+
+import java.util.ArrayList;
 
 public class MovieService implements MovieDao<Movie, Integer> {
 
@@ -50,6 +53,12 @@ public class MovieService implements MovieDao<Movie, Integer> {
         LOGGER.info("method delete start with entityId: " + entityId);
         checkMovieJdbcDaoAndCreateIfDoesntExist();
         return movieJdbcDao.delete(entityId);
+    }
+
+    public ArrayList<Movie> getAllMovies() {
+        LOGGER.info("method getAllMovies start");
+        checkMovieJdbcDaoAndCreateIfDoesntExist();
+        return movieJdbcDao.getAllMovies();
     }
 
     private void checkMovieJdbcDaoAndCreateIfDoesntExist() {

@@ -28,7 +28,7 @@ public class OrderJdbcDao implements OrderDao<Order, Integer> {
     @Override
     public  ArrayList<Order> readByUserId(Integer userId) {
         LOGGER.info("method readByUserId started with id: " + userId);
-        ArrayList<Order> theOrders = null;
+        ArrayList<Order> theOrders = new ArrayList<>();
 
         try(PreparedStatement statement = connection.prepareStatement(properties.getProperty("selectByUserId"))) {
             statement.setInt(1, userId);

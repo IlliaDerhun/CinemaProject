@@ -17,7 +17,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 
 @WebServlet("/ControllerDispatcherServlet")
 public class ControllerDispatcherServlet extends HttpServlet {
@@ -52,17 +57,47 @@ public class ControllerDispatcherServlet extends HttpServlet {
                 case "USER_PAGE":
                     showUserPage(request, response);
                     break;
+                case "ADD_MOVIE":
+                    addMovie(request, response);
+                    break;
+                case "MAKE_ORDER":
+                    makeOrder(request, response);
                 default: {
                     showIndexPage(request, response);
                 }
             }
 
         } catch (Exception e) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/accessDenied.jsp");
-            dispatcher.forward(request, response);
+            /*RequestDispatcher dispatcher = request.getRequestDispatcher("/accessDenied.jsp");
+            dispatcher.forward(request, response);*/
             throw new ServletException(e);
         }
 
+    }
+
+    private void makeOrder(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Integer row = Integer.parseInt(request.getParameter("row"));
+        Integer col = Integer.parseInt(request.getParameter("col"));
+        Integer movieId = Integer.parseInt(request.getParameter("movieId"));
+        Integer userId = (Integer) request.getSession(true).getAttribute("userId");
+
+        new OrderController().makeOrder(row, col, movieId, userId);
+
+        showIndexPage(request, response);
+    }
+
+    private void addMovie(HttpServletRequest request, HttpServletResponse response) throws ParseException, ServletException, IOException {
+        String title = request.getParameter("title");
+        String description = request.getParameter("description");
+        String time = request.getParameter("time");
+        String price = request.getParameter("price");
+        String schedule = request.getParameter("schedule");
+        String poster = request.getParameter("poster");
+        System.out.println("Poster ===>> " + poster);
+
+        new MovieController().addNewMovie(title, description, time, price, schedule);
+
+        showUserPage(request, response);
     }
 
     private void loginUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -86,17 +121,14 @@ public class ControllerDispatcherServlet extends HttpServlet {
     private void showUserPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Integer userId = (Integer) request.getSession(true).getAttribute("userId");
         Integer userRole = (Integer) request.getSession(true).getAttribute("userRole");
-       /* ArrayList<Order> orders = new ArrayList<>();
 
         if (userRole == 1) {
-            orders = new OrderController().getCustomerOrders(userId);
+            ArrayList<Order> orders = new OrderController().getCustomerOrders(userId);
+            request.setAttribute("orders", orders);
+        } else if (userRole == 2) {
+            ArrayList<Movie> movies = new MovieController().getMovieForManagerPage();
+            request.setAttribute("orders", movies);
         }
-
-        if (orders != null) {
-            request.setAttribute("repairOrders", orders);
-        } else {
-            request.setAttribute("repairOrders", "noOrders");
-        }*/
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/userPage.jsp");
         dispatcher.forward(request, response);

@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -18,13 +19,13 @@ public class ScheduleJdbcDaoTest {
 
     @Before
     public void setUp() throws Exception {
-        expectedSchedule = new Schedule.Builder(new Date(119, 10, 19), "Monday")
+        expectedSchedule = new Schedule.Builder(new Timestamp(1234L), "Monday")
                 .setId(1)
                 .setMovieId(1)
                 .setOrderId(1)
                 .build();
 
-        someSchedule = new Schedule.Builder(new Date(118, 10, 20), "Monday")
+        someSchedule = new Schedule.Builder(new Timestamp(1234L), "Monday")
                 .setMovieId(1)
                 .setOrderId(1)
                 .build();

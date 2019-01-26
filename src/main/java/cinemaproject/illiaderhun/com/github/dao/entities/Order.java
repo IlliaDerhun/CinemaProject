@@ -1,5 +1,7 @@
 package cinemaproject.illiaderhun.com.github.dao.entities;
 
+import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.Objects;
 
 public class Order {
@@ -9,6 +11,8 @@ public class Order {
     private Integer col;
     private Integer userId;
     private Integer scheduleId;
+    private Timestamp date;
+    private String movie;
 
     public Order(Integer id, Integer row, Integer col, Integer userId, Integer scheduleId) {
         this.id = id;
@@ -58,6 +62,22 @@ public class Order {
         this.scheduleId = scheduleId;
     }
 
+    public Timestamp getDate() {
+        return date;
+    }
+
+    public void setDate(Timestamp date) {
+        this.date = date;
+    }
+
+    public String getMovie() {
+        return movie;
+    }
+
+    public void setMovie(String movie) {
+        this.movie = movie;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -67,13 +87,15 @@ public class Order {
                 Objects.equals(row, order.row) &&
                 Objects.equals(col, order.col) &&
                 Objects.equals(userId, order.userId) &&
-                Objects.equals(scheduleId, order.scheduleId);
+                Objects.equals(scheduleId, order.scheduleId) &&
+                Objects.equals(date, order.date) &&
+                Objects.equals(movie, order.movie);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, row, col, userId, scheduleId);
+        return Objects.hash(id, row, col, userId, scheduleId, date, movie);
     }
 
     @Override
@@ -84,6 +106,8 @@ public class Order {
                 ", col=" + col +
                 ", userId=" + userId +
                 ", scheduleId=" + scheduleId +
+                ", date=" + date +
+                ", movie='" + movie + '\'' +
                 '}';
     }
 }

@@ -1,6 +1,7 @@
 package cinemaproject.illiaderhun.com.github.dao.impl;
 
 import cinemaproject.illiaderhun.com.github.dao.entities.Movie;
+import cinemaproject.illiaderhun.com.github.dao.entities.Order;
 import cinemaproject.illiaderhun.com.github.dao.interfaces.MovieDao;
 import cinemaproject.illiaderhun.com.github.util.ConnectionManager;
 import cinemaproject.illiaderhun.com.github.util.QueriesManager;
@@ -12,6 +13,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Properties;
 
 public class MovieJdbcDao implements MovieDao<Movie, Integer> {
@@ -83,6 +85,26 @@ public class MovieJdbcDao implements MovieDao<Movie, Integer> {
         }
 
         return theMovie;
+    }
+
+    @Override
+    public ArrayList<Movie> getAllMovies() {
+        LOGGER.info("method getAllMovies started");
+        ArrayList<Movie> theMovies = new ArrayList<>();
+
+        try(PreparedStatement statement = connection.prepareStatement(properties.getProperty("selectAll"))) {
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet != null && resultSet.next()) {
+                do {
+                    theMovies.add(madeMovie(resultSet));
+                } while (resultSet.next()) ;
+            }
+        } catch (SQLException e) {
+            LOGGER.error("method readByUserId caught SQLException");
+            LOGGER.trace(e);
+        }
+
+        return theMovies;
     }
 
     @Override

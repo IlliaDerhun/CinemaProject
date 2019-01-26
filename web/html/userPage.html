@@ -19,3 +19,36 @@
         </table>
     </div>
 </div>
+<div class="userOrders">
+    <h4><fmt:message key="label.yourOrders"/></h4>
+    <c:if test="${err.equals('regExp')}">
+        <span style="color: #ff0000"><fmt:message key="label.wrongFields"/></span>
+    </c:if>
+    <div class="table-responsive">
+
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th><fmt:message key="label.row"/></th>
+                <th><fmt:message key="label.col"/></th>
+                <th><fmt:message key="label.date"/></th>
+                <th><fmt:message key="label.movie"/></th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:if test="${!orders.equals('noOrders')}">
+                <c:forEach var="tempOrder" items="${orders}">
+                    <tr>
+                        <td>${tempOrder.id}</td>
+                        <td>${tempOrder.row}</td>
+                        <td>${tempOrder.col}</td>
+                        <td>${tempOrder.date}</td>
+                        <td>${tempOrder.movie}</td>
+                    </tr>
+                </c:forEach>
+            </c:if>
+            </tbody>
+        </table>
+    </div>
+</div>

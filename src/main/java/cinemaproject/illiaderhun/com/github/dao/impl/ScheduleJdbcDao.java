@@ -57,7 +57,7 @@ public class ScheduleJdbcDao implements ScheduleDao<Schedule, Integer> {
 
     private void setStatement(PreparedStatement statement, Schedule theEntity) throws SQLException {
         LOGGER.info("method setStatement start");
-        statement.setDate(1, theEntity.getDateTime());
+        statement.setTimestamp(1, theEntity.getDateTime());
         statement.setString(2, theEntity.getDayOfWeek());
         statement.setInt(3, theEntity.getMovieId());
         statement.setInt(4, theEntity.getOrderId());
@@ -86,10 +86,12 @@ public class ScheduleJdbcDao implements ScheduleDao<Schedule, Integer> {
         LOGGER.info("method madeSchedule started with resultSet: " + resultSet);
 
         Integer id = resultSet.getInt("id");
-        Date dateTime = resultSet.getDate("date_time");
+        Timestamp dateTime = resultSet.getTimestamp("date_time");
         String dayOfWeek = resultSet.getString("day_of_week");
         Integer movieId = resultSet.getInt("movie_id");
         Integer orderId = resultSet.getInt("order_id");
+
+        LOGGER.info("datetime: " + resultSet.getTimestamp("date_time"));
 
         Schedule theSchedule = new Schedule.Builder(dateTime, dayOfWeek)
                 .setId(id)

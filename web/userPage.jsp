@@ -13,6 +13,9 @@
     <c:when test="${sessionScope.userRole==1}">
         <%@include file="html/userPage.html"%>
     </c:when>
+    <c:when test="${sessionScope.userRole==2}">
+        <%@include file="html/managerPage.html"%>
+    </c:when>
     <c:otherwise>
         <%@include file="html/login.html"%>
     </c:otherwise>

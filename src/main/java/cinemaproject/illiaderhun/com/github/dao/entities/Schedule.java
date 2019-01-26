@@ -1,12 +1,13 @@
 package cinemaproject.illiaderhun.com.github.dao.entities;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.Objects;
 
 public class Schedule {
 
     private Integer id;
-    private Date dateTime;
+    private Timestamp dateTime;
     private String dayOfWeek;
     private Integer movieId;
     private Integer orderId;
@@ -21,7 +22,7 @@ public class Schedule {
 
     public static class Builder {
         // required fields
-        private Date dateTime;
+        private Timestamp dateTime;
         private String dayOfWeek;
 
         // optional fields
@@ -29,7 +30,7 @@ public class Schedule {
         private Integer movieId;
         private Integer orderId;
 
-        public Builder(Date dateTime, String dayOfWeek) {
+        public Builder(Timestamp dateTime, String dayOfWeek) {
             this.dateTime = dateTime;
             this.dayOfWeek = dayOfWeek;
         }
@@ -62,11 +63,11 @@ public class Schedule {
         this.id = id;
     }
 
-    public Date getDateTime() {
+    public Timestamp getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(Date dateTime) {
+    public void setDateTime(Timestamp dateTime) {
         this.dateTime = dateTime;
     }
 
