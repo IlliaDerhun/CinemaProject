@@ -1,3 +1,31 @@
-2018-10-06 23:14:18,627  INFO Main:8 - method main start
-2018-10-06 23:14:18,629  WARN Main:9 - some warning
-2018-10-06 23:14:18,629 ERROR Main:10 - some error
+2018-12-22 15:45:59,737  INFO OrderService:22 - method readByScheduleId start with id: 1
+2018-12-22 15:45:59,742  INFO ConnectionManager:35 - method getConnection started with no parameters
+2018-12-22 15:46:33,114  INFO OrderService:22 - method readByScheduleId start with id: 1
+2018-12-22 15:46:33,117  INFO ConnectionManager:18 - method getConnection started with no parameters
+2018-12-22 15:46:33,427  INFO QueriesManager:14 - method getProperties start with parameter: order
+2018-12-22 15:46:33,428  INFO QueriesManager:17 - generated path: queries/order/queries.properties
+2018-12-22 15:46:33,428  INFO QueriesManager:24 - properties has been loaded
+2018-12-22 15:46:33,428  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM `order` where id = ?;, selectByUserId=SELECT * FROM `order` where user_id = ?;, readInsertedId=SELECT max(id) as id from `order`;, insert=INSERT INTO `order` (`row`, `col`, user_id, schedule_id) VALUES (?, ?, ?, ?);, delete=DELETE FROM `order` WHERE id = ?;, update=UPDATE `order` SET `row` = ?, `col` = ?, user_id = ?, schedule_id = ? WHERE id = ?;, selectByScheduleId=SELECT * FROM `order` where schedule_id = ?;}
+2018-12-22 15:46:33,429  INFO OrderJdbcDao:47 - method readByScheduleId started with id: 1
+2018-12-22 15:46:33,460  INFO OrderJdbcDao:65 - method madeOrder started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@30b8a058
+2018-12-22 15:46:33,461  INFO OrderJdbcDao:75 - method madeOrder return: Order{id=4, row=1, col=2, userId=9, scheduleId=1}
+2018-12-22 15:47:04,133  INFO OrderService:22 - method readByScheduleId start with id: 1
+2018-12-22 15:47:04,137  INFO ConnectionManager:18 - method getConnection started with no parameters
+2018-12-22 15:47:04,422  INFO QueriesManager:14 - method getProperties start with parameter: order
+2018-12-22 15:47:04,423  INFO QueriesManager:17 - generated path: queries/order/queries.properties
+2018-12-22 15:47:04,423  INFO QueriesManager:24 - properties has been loaded
+2018-12-22 15:47:04,423  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM `order` where id = ?;, selectByUserId=SELECT * FROM `order` where user_id = ?;, readInsertedId=SELECT max(id) as id from `order`;, insert=INSERT INTO `order` (`row`, `col`, user_id, schedule_id) VALUES (?, ?, ?, ?);, delete=DELETE FROM `order` WHERE id = ?;, update=UPDATE `order` SET `row` = ?, `col` = ?, user_id = ?, schedule_id = ? WHERE id = ?;, selectByScheduleId=SELECT * FROM `order` where schedule_id = ?;}
+2018-12-22 15:47:04,423  INFO OrderJdbcDao:47 - method readByScheduleId started with id: 1
+2018-12-22 15:47:04,450  INFO OrderJdbcDao:65 - method madeOrder started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@30b8a058
+2018-12-22 15:47:04,451  INFO OrderJdbcDao:75 - method madeOrder return: Order{id=4, row=1, col=2, userId=9, scheduleId=1}
+2018-12-22 15:52:39,557  INFO OrderService:24 - method readByScheduleId start with id: 1
+2018-12-22 15:52:39,562  INFO ConnectionManager:18 - method getConnection started with no parameters
+2018-12-22 15:52:39,836  INFO QueriesManager:14 - method getProperties start with parameter: order
+2018-12-22 15:52:39,836  INFO QueriesManager:17 - generated path: queries/order/queries.properties
+2018-12-22 15:52:39,836  INFO QueriesManager:24 - properties has been loaded
+2018-12-22 15:52:39,837  INFO QueriesManager:30 - method getProperties returns: {select=SELECT * FROM `order` where id = ?;, selectByUserId=SELECT * FROM `order` where user_id = ?;, readInsertedId=SELECT max(id) as id from `order`;, insert=INSERT INTO `order` (`row`, `col`, user_id, schedule_id) VALUES (?, ?, ?, ?);, delete=DELETE FROM `order` WHERE id = ?;, update=UPDATE `order` SET `row` = ?, `col` = ?, user_id = ?, schedule_id = ? WHERE id = ?;, selectByScheduleId=SELECT * FROM `order` where schedule_id = ?;}
+2018-12-22 15:52:39,837  INFO OrderJdbcDao:49 - method readByScheduleId started with id: 1
+2018-12-22 15:52:39,864  INFO OrderJdbcDao:70 - method madeOrder started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@30b8a058
+2018-12-22 15:52:39,865  INFO OrderJdbcDao:80 - method madeOrder return: Order{id=4, row=1, col=2, userId=9, scheduleId=1}
+2018-12-22 15:52:39,865  INFO OrderJdbcDao:70 - method madeOrder started with resultSet: com.mysql.cj.jdbc.result.ResultSetImpl@30b8a058
+2018-12-22 15:52:39,865  INFO OrderJdbcDao:80 - method madeOrder return: Order{id=5, row=1, col=3, userId=9, scheduleId=1}

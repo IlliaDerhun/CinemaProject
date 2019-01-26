@@ -1,0 +1,68 @@
+<link href="css/userPage.css" rel="stylesheet">
+<div class="userInfo">
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th><fmt:message key="label.name"/></th>
+                <th><fmt:message key="label.surname"/></th>
+                <th><fmt:message key="label.email"/></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>${sessionScope.firstName}</td>
+                <td>${sessionScope.lastName}</td>
+                <td>${sessionScope.email}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="userOrders">
+    <h4><fmt:message key="label.yourOrders"/></h4>
+    <c:if test="${err.equals('regExp')}">
+        <span style="color: #ff0000"><fmt:message key="label.wrongFields"/></span>
+    </c:if>
+    <div class="table-responsive">
+
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th><fmt:message key="index.title"/></th>
+                <th><fmt:message key="index.description"/></th>
+                <th><fmt:message key="index.time"/></th>
+                <th><fmt:message key="index.price"/></th>
+                <th><fmt:message key="index.schedule"/></th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:if test="${!orders.equals('noOrders')}">
+                <c:forEach var="tempOrder" items="${orders}">
+                    <tr>
+                        <td>${tempOrder.id}</td>
+                        <td>${tempOrder.title}</td>
+                        <td>${tempOrder.description}</td>
+                        <td>${tempOrder.time}</td>
+                        <td>${tempOrder.price}</td>
+                    </tr>
+                </c:forEach>
+            </c:if>
+            <form action="/ControllerDispatcherServlet" method="post">
+                <input type="hidden" name="command" value="ADD_MOVIE">
+                <tr>
+                    <td><input type="text" name="title" maxlength="45" required placeholder="<fmt:message key='index.title'/>"/></td>
+                    <td><input type="text" name="description" maxlength="256" required placeholder="<fmt:message key='index.description'/>"/></td>
+                    <td><input type="text" name="time" maxlength="256" required placeholder="<fmt:message key='index.time'/>"/></td>
+                    <td><input type="text" name="price" maxlength="256" required placeholder="<fmt:message key='index.price'/>"/></td>
+                    <td><input type="number" name="schedule" maxlength="256" required placeholder="<fmt:message key='index.schedule'/>"/></td>
+                    <td><input type="file" name="poster" required accept="image/*"/></td>
+
+                    <td><input type="submit" value="<fmt:message key='label.add'/>"/></td>
+                </tr>
+            </form>
+            </tbody>
+        </table>
+    </div>
+</div>
